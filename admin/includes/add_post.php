@@ -47,36 +47,36 @@ if(isset($_POST['create_post'])){
                         </h1>
 
 
-                  <form method="post" action="" enctype="multipart/form-data">
-                    <div class="form-group">
-                      <label for="">Post title</label>
-                      <input type="text" class="form-control" name="post_title">
-                    </div>
-                    <div class="form-group">
-                      <label for="">Post Category Id</label>
-                      <input type="text" class="form-control" name="post_category_id">
-                    </div>
-                    <div class="form-group">
-                      <label for="">Post Author</label>
-                      <input type="text" class="form-control" name="post_author">
-                    </div>
-                    <div class="form-group">
-                      <label for="">Post Status</label>
-                      <input type="text" class="form-control" name="post_status">
-                    </div>
-                    <div class="form-group">
-                      <label for="">Post Image</label>
-                      <input type="file" name="image">
-                    </div>
-                    <div class="form-group">
-                      <label for="">Post Tags</label>
-                      <input type="text" class="form-control" name="post_tags">
-                    </div>
-                    <div class="form-group">
-                      <label>Post Content</label>
-                      <textarea class="form-control" name="post_content" rows="3"></textarea>
-                    </div>
+              <form method="post" action="" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="">Post title</label>
+                  <input type="text" class="form-control" name="post_title">
+                </div>
+                <div class="form-group">
+                  <label for="">Post Category Id</label>
+                  <input type="text" class="form-control" name="post_category_id">
+                </div>
+                <div class="form-group">
+                  <label for="">Post Author</label>
+                  <input type="text" class="form-control" name="post_author">
+                </div>
+                <div class="form-group">
+                  <label for="">Post Status</label>
+                  <input type="text" class="form-control" name="post_status">
+                </div>
+                <div class="form-group">
+                  <label for="">Post Image</label>
+                  <input type="file" name="image">
+                </div>
+                <div class="form-group">
+                  <label for="">Post Tags</label>
+                  <input type="text" class="form-control" name="post_tags">
+                </div>
+                <div class="form-group">
+                  <label>Post Content</label>
+                  <textarea class="form-control" name="post_content" rows="3"></textarea>
+                </div>
 
-                    <input class="btn-primary" type="submit" value="Submit" name="create_post">
-                  </form>
+                <input class="btn-primary" type="submit" value="Submit" name="create_post">
+              </form>
 

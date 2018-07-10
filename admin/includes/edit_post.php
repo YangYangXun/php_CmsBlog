@@ -29,7 +29,7 @@
 
             if(isset($_POST['update_post'])){
 
-                if (empty($post_image)) {
+                if (empty($image)) {
                     //確保post_image 不為空
                     echo "check post_image not empty";
                     $query = "select * from posts where post_id = {$p_id} ";
@@ -42,12 +42,10 @@
                 }
 
 
-
-
-                if ($_FILES["image"]["error"] > 0) {
-                        echo "Error: " . $_FILES["image"]["error"] . "<br>";
-                } 
-                else {
+                // if ($_FILES["image"]["error"] > 0) {
+                //         echo "Error: " . $_FILES["image"]["error"] . "<br>";
+                // } 
+                // else {
 
                     $post_category_id = $_POST['post_category_id'];
                     $post_title = $_POST['post_title'];
@@ -63,7 +61,7 @@
                     $post_comment_count = 4;
 
                   move_uploaded_file($post_image_temp,"../images/$post_image");
-                 }//else
+                //  }//else
                
 
                  $query = "update posts set ";
@@ -127,7 +125,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Post Image</label><br>
-                            <img src= '../images/<?php echo $post_image?>' name="image"  >
+                            <img src= '../images/<?php echo $post_image?>' name="post_image"  >
                              
                             <input type="file" name="image">
 

@@ -37,7 +37,15 @@
                                     echo "<td>$post_id</td>";
                                     echo "<td>$post_author</td>";
                                     echo "<td>$post_title</td>";
-                                    echo "<td>$post_category_id</td>";
+                                     
+                                    // bulid relationship with table category & table posts
+                                    $query = "select * from category where cat_id = {$post_category_id} ";
+                                    $select_cat_title_by_id = mysqli_query($connection, $query);
+                                    confirmQuery($select_cat_title_by_id);
+                                    $row = mysqli_fetch_assoc($select_cat_title_by_id);
+                                    $post_category_title = $row['cat_title'];
+
+                                    echo "<td>$post_category_title</td>";
                                     echo "<td>$post_status</td>";
                                     echo "<td> <img class='img-responsive' src='../images/$post_image'></td>";
                                     echo "<td>$post_tags</td>";

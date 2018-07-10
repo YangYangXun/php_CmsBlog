@@ -21,13 +21,14 @@ img{
         <div id="page-wrapper">
 
             <div class="container-fluid">
-
+                <?php if (!isset($_GET['source'])) { ?>
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Posts
                         </h1>
+                <?php } ?>
                      
 
                 <?php 
@@ -38,21 +39,33 @@ img{
                     }
 
                     switch ($source) {
-                        case 22: 
-                            echo "22";
-                            break;
-                        case 23:
+                       
+                        case 'add_post':
                             include "includes/add_post.php";
                             break;
-                        case 24:
-                            echo "24";
+                        case 'edit_post':
+                            include "includes/edit_post.php";
                             break;
-                        
                         default:
                             include "includes/view_all_posts.php";
-
                             break;
                     }
+
+
+                    if (isset($_GET['delete'])) {
+                        $delete = $_GET['delete'];
+                        $query = "delete from posts where post_id = $delete";
+                        $delete_query = mysqli_query($connection, $query);
+                        confirmQuery($delete_query);
+
+
+                    } else {
+                        $delete = '';
+                    }
+
+
+
+
                 ?>
                         
                         

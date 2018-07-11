@@ -38,10 +38,10 @@
                             <ul class="list-unstyled">
                                 <?php                                
                                     while ($row = mysqli_fetch_assoc($result)) {
-
+                                        $cat_id = $row['cat_id'];
                                         $cat_title = $row['cat_title'];
+                                        printf("<li><a href='category.php?cat_id=%s'>%s</a></li>", $cat_id, $cat_title);
 
-                                        printf("<li><a href='#'>%s</a></li>", $cat_title);
 
                                     }
                                 ?>
@@ -50,14 +50,7 @@
                         <!-- /.col-lg-6 -->
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
+                           
                             </ul>
                         </div>
                         <!-- /.col-lg-6 -->

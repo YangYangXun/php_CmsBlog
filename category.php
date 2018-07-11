@@ -23,7 +23,10 @@ include "includes/header.php";
             <div class="col-md-8">
             <?php
 
-              $query = "select * from posts";
+            if(isset($_GET['cat_id'])){
+                $cat_id = $_GET['cat_id'];
+
+              $query = "select * from posts where post_category_id = $cat_id ";
               $all_posts = mysqli_query($connection,$query);
               while($row = mysqli_fetch_assoc($all_posts)){
                   $post_id = $row['post_id'];
@@ -31,8 +34,7 @@ include "includes/header.php";
                   $post_author = $row['post_author'];
                   $post_date = $row['post_date'];
                   $post_image = $row['post_image'];
-                  $post_content = substr($row['post_content'], 0, 100);
-
+                  $post_content = substr($row['post_content'],0,100); 
                   ?>
 
                 <?php ?>
@@ -64,7 +66,7 @@ include "includes/header.php";
 
            <?php   
             }// end while
-
+        }//end if
 
             ?>
 

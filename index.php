@@ -23,7 +23,7 @@ include "includes/header.php";
             <div class="col-md-8">
             <?php
 
-              $query = "select * from posts";
+              $query = "select * from posts ";
               $all_posts = mysqli_query($connection,$query);
               while($row = mysqli_fetch_assoc($all_posts)){
                   $post_id = $row['post_id'];
@@ -31,7 +31,12 @@ include "includes/header.php";
                   $post_author = $row['post_author'];
                   $post_date = $row['post_date'];
                   $post_image = $row['post_image'];
+                  $post_status = $row['post_status'];
                   $post_content = substr($row['post_content'], 0, 100);
+
+                  if( $post_status == 'published'){
+
+                
 
                   ?>
 
@@ -63,6 +68,15 @@ include "includes/header.php";
                   
 
            <?php   
+           
+                  }else{
+                      echo "<h1>No data sorry</h1>";
+                    
+
+                  }//end if else
+
+
+
             }// end while
 
 

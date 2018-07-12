@@ -10,6 +10,8 @@
                                     <th>Tags</th>
                                     <th>Comments</th>
                                     <th>Date</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,7 +32,7 @@
                                     $post_content = $row['post_content'];
                                     $post_tags = $row['post_tags'];
                                     $post_status = $row['post_status'];
-                                    $post_comment_count = 4;
+                                    $post_comment_count = $row['post_comment_count'];
                                     
                                     
                                     echo "<tr>";
@@ -47,7 +49,7 @@
 
                                     echo "<td>$post_category_title</td>";
                                     echo "<td>$post_status</td>";
-                                    echo "<td> <img class='img-responsive' src='../images/$post_image'></td>";
+                                    echo "<td> <img class='img-responsive' src='../images/$post_image' width='200px' height='100px' ></td>";
                                     echo "<td>$post_tags</td>";
                                     echo "<td>$post_comment_count</td>";
                                     echo "<td>$post_date</td>";

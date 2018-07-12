@@ -25,9 +25,9 @@
 
 $connection = mysqli_connect("localhost","root","","cms");
 
-if($connection){
-    echo "We are Connect!";
-}
+// if($connection){
+//     // echo "We are Connect!";
+// }
 
 
 

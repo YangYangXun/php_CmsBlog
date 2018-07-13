@@ -103,3 +103,6 @@ if(isset($_POST['create_post'])){
                 <input class="btn-primary" type="submit" value="Submit" name="create_post">
               </form>
 
+
+
+

@@ -40,23 +40,24 @@ img{
 
                     switch ($source) {
                        
-                        case 'add_post':
-                            include "includes/add_post.php";
+                        case 'add_user':
+                            include "includes/add_user.php";
                             break;
-                        case 'edit_post':
-                            include "includes/edit_post.php";
+                        case 'edit_user':
+                            include "includes/edit_user.php";
                             break;
                         default:
-                            include "includes/view_all_comments.php";
+                            include "includes/view_all_users.php";
                             break;
                     }
 
 
                     // if (isset($_GET['delete'])) {
+                    //     echo "hi delete";
                     //     $delete = $_GET['delete'];
-                    //     $query = "delete from posts where post_id = $delete";
-                    //     $delete_query = mysqli_query($connection, $query);
-                    //     confirmQuery($delete_query);
+                    //     $query = "delete from users where user_id = $delete";
+                    //     $delete_user_query = mysqli_query($connection, $query);
+                    //     confirmQuery($delete_user_query);
 
 
                     // } else {

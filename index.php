@@ -69,11 +69,7 @@ include "includes/header.php";
 
            <?php   
            
-                  }else{
-                      echo "<h1>No data sorry</h1>";
-                    
-
-                  }//end if else
+                  }
 
 
 
